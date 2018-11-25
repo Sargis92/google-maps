@@ -2,7 +2,7 @@
 Make a ToGo list by using Google Maps, and let the user save places the user wants to visit.
 
 ## Development server
-To go toi the project root,
+To go to the project root,
  1) npm install (install node modules)
  2) Run `ng serve` for a dev server. Navigate to `http://127.0.0.1:4200/#`. The app will automatically reload if you change any of the source files.
 
