@@ -19,18 +19,18 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Project description
 
-This project was implemented by angular 7.
+This project was implemented using angular 7.
 
-In first step create api key for the google maps.
-In second step install "@agm/core" module for show the google maps .
+In the first step api key was created for the google maps.
+In the second step "@agm/core" module was installed  in order to show the google maps .
 
 
 
-In third step have created 3 separate components:
+In the third step have created 3 separate components:
 
-  1) `ToGoList` component (whrer the user could see his selected places)
+  1) `ToGoList` component (where the user can see his selected places)
   2) `MapView` component (where is located google maps)
-  3) `Popup`  component (where the user could enter the name of selected place)
+  3) `Popup`  component (where the user can enter the name of the selected place)
 
- were created filter pipe(for filter list view) and service (share data between components )
+Were created filter pipe(for filtering list view) and service which can share data between components.
 
