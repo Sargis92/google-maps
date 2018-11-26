@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {TransformDataService} from '../../services/transform-data.service';
-import {Subscription} from 'rxjs/Subscription';
+import {Subscription} from "rxjs/Subscription";
 
 @Component({
   selector: 'app-to-go-list',

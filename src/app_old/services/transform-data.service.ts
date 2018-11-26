@@ -24,4 +24,8 @@ export class TransformDataService {
     this.showPlaceOnMapSource.next(data);
   }
 
+  // showPopup(show: boolean) {
+  //   this.showPopupSource.next(show);
+  // }
+
 }

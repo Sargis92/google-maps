@@ -1,0 +1,18 @@
+.container {
+  display: -webkit-flex;
+  display: flex;
+  margin: 20px;
+  border: 1px solid grey;
+}
+
+.leftsidebar{
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.rightsidebar{
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}

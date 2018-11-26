@@ -21,7 +21,7 @@ export class MapsViewComponent implements OnInit, OnDestroy {
   zoom: number;
   map: any;
   subscriptionPlace: Subscription;
-  currentCoords: object;
+  currentCoords;
 
   // initial center position for the map
   lat: number;
@@ -36,6 +36,7 @@ export class MapsViewComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+
     this.subscriptionPlace = this.transformDataService.datashowPlaceOnMap.subscribe((data) => {
       const showPlaceObj = {lat: data['lat'], lng: data['lng']};
       this.map.panTo(showPlaceObj);

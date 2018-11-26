@@ -4,15 +4,15 @@
     <h2>Place Name</h2>
     <a class="close" href="#" (click)="this.closePopup.emit(false)">&times;</a>
     <div class="content">
-      <input type="text" name="place" required   [(ngModel)]="enterPlace" (ngModelChange)="modelChanged($event)" class="form-control"
+      <input type="text" name="place" required   [(ngModel)]="enterPlace" class="form-control"
              #place="ngModel"   placeholder="Enter a name"/>
     </div>
-    <div *ngIf="enterPlace && placeNameError" class="invalid-feedback">You already have a similar name</div>
-    <div *ngIf="place.invalid && (place.dirty || place.touched)">
+    <div *ngIf="placeNameError" class="invalid-feedback">You already have a similar name</div>
+    <div *ngIf="place.invalid && (place.dirty || place.touched)" >
       <span class="invalid-feedback" *ngIf="place.errors['required']">Name is required.</span>
     </div>
     <div class="footer">
-      <button class="removePlace" [disabled]="!place.valid" (click)="this.savePlaceName()">Save</button>
+      <button class="removePlace" [disabled]="!place.valid" (click)="this.placeName.emit(enterPlace)">Save</button>
       <button class="cancel"  (click)="this.closePopup.emit(false)">Cancel</button>
     </div>
   </div>

@@ -7,9 +7,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class PopupComponent implements OnInit {
   enterPlace: string;
-  latestSubmittedVal: string;
   @Output() closePopup = new EventEmitter<boolean>();
-  @Output() placeName = new EventEmitter<string>();
+  @Output() placeName = new EventEmitter<boolean>();
   @Input() placeNameError: boolean;
 
 
@@ -17,20 +16,7 @@ export class PopupComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  modelChanged(newVal) {
-    if (newVal && this.latestSubmittedVal !== newVal) {
-      this.placeNameError = false;
-    } else {
-      this.placeNameError = true;
-    }
-  }
-
-  savePlaceName() {
-    this.latestSubmittedVal = this.enterPlace;
-	this.modelChanged(this.enterPlace);
-    this.placeName.emit(this.enterPlace);
+    console.log(this.placeNameError);
   }
 
 
